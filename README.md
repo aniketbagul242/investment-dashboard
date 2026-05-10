@@ -1,154 +1,152 @@
- Investment Dashboard (Next.js)
+# 🚀 Next.js Investment Dashboard Assignment
 
-A highly interactive frontend-only investment dashboard built using Next.js, React, Redux Toolkit, and Recharts, simulating real-world fintech analytics without any backend APIs.
+A highly interactive and data-rich **investment & corporate dashboard** built using **Next.js** with fully simulated backend behavior.  
+This project focuses on **frontend architecture, scalable design, performance optimization, and advanced UI/UX** without using real APIs.
 
- Live Demo
+---
+Live Demo : https://investment-dashboard-one-brown.vercel.app/
 
-(Add your Vercel link here)
+## 📌 Objective
 
-📁 Project Overview :
+To build a production-like dashboard for investors and corporates using:
+- Mock datasets
+- Simulated API calls
+- Advanced frontend logic
+- Optimized UI/UX performance
 
-This project simulates a real-world investor & corporate dashboard where all data is mocked locally and API behavior is replicated using service layers with artificial delays.
+---
 
-It focuses on:
+## 🧠 Key Highlights
 
-Scalable frontend architecture
-Data simulation (no backend APIs)
-Advanced UI/UX design
-Performance optimization
-State management with Redux Toolkit
+- No real backend APIs used
+- Fully simulated service layer (API-like behavior)
+- Large dataset handling (50–100 deals)
+- Scalable frontend architecture
+- Real-world dashboard experience
 
+---
 
-
- Architecture:
-
-The project follows a feature-based architecture:
-
-/components   → Reusable UI components (charts, cards, layout)
-/services     → Mock API layer (dealService, analyticsService)
-/data         → Static JSON datasets
-/store        → Redux Toolkit slices
-/hooks        → Custom React hooks (if any)
-/utils        → Helper functions
-/app          → Next.js pages (dashboard, corporate, etc.)
+## 🏗️ Project Architecture
 
 
- Data Layer (Mock Data) :
+components/ → Reusable UI components (charts, cards, layouts)
+pages/ → Next.js pages (Dashboard, Deals, Corporate, etc.)
+services/ → Mock API logic (dealService, investorService)
+data/ → JSON mock datasets
+hooks/ → Custom React hooks
+utils/ → Helper functions (formatting, calculations)
 
-Instead of backend APIs, the app uses:
 
-deals.json → 50–100 mock deals
-investors.json → 10–20 investors
+---
 
-Stored locally in /data folder.
+## 📊 Features Implemented
 
- Service Layer (API Simulation)
+### 1. Investor Dashboard
+- Total Investments overview
+- Active Deals tracking
+- ROI analytics
+- Risk distribution charts
 
-All data operations are handled via service files:
+### 2. Deal Explorer
+- Debounced search
+- Multi-filter system (ROI, risk, industry, budget)
+- Sorting & pagination
+- Efficient large dataset handling
 
-Features:
-Simulated API calls using Promises
-Artificial delay (300–800ms)
-Filtering, sorting, pagination logic
-Error simulation (optional)
+### 3. Deal Details Page
+- Company overview
+- Financial metrics
+- ROI projections
+- Risk analysis
+- Interactive UI (tabs & sections)
 
-Example:
+### 4. Recommendation Engine
+- Frontend scoring logic based on:
+  - Risk match
+  - Industry preference
+  - Budget compatibility
+  - ROI attractiveness
+- Optimized using memoization
 
-await new Promise(res => setTimeout(res, 600));
-📈 Features
-🏠 Investor Dashboard
-Total Deals
-Average ROI
-Total Investment
-Charts:
-ROI Performance
-Investment Growth
-Risk Distribution
-🔍 Deal Explorer
-Debounced search
-Multi-filter (ROI, risk, industry, investment range)
-Sorting
-Pagination support
-📄 Deal Details Page
-Company overview
-Financial metrics
-ROI projections
-Risk analysis
-Tab-based UI
-🧠 Recommendation Engine
+### 5. My Investments
+- Add/remove investments
+- Local storage persistence
 
-Frontend-based scoring system:
+### 6. Corporate Dashboard
+- Funding analytics
+- Investor count
+- Conversion rate tracking
+- Trend visualization
 
-Risk match
-Industry match
-Budget compatibility
-ROI attractiveness
+---
 
-Deals are ranked using a computed score and memoized for performance.
+## 🔄 Data Layer (Mock System)
 
-💼 Corporate Dashboard
-Total funding raised
-Investor count
-Conversion rate
-Trend charts using Recharts
-📊 Data Visualization
+- 50–100 deals dataset
+- 10–20 investors dataset
+- Stored in local JSON files
 
-Libraries used:
+---
 
-Recharts
+## ⚙️ Service Layer (Simulated Backend)
 
-Charts implemented:
+- API-like functions using Promises
+- Artificial delay (300–800ms)
+- Filtering, sorting, pagination logic
+- Optional error simulation
 
-Line Chart → ROI / Growth trends
-Bar Chart → Investment distribution
-Pie Chart → Risk analysis
-🧩 State Management
-Redux Toolkit used for global state
-Handles:
-Loading states
-Modal state
-Theme state (light/dark optional)
-Caching logic
-⚡ Performance Optimization
+---
 
-Implemented optimizations:
+## 📈 Data Visualization
 
-useMemo for computed filtering
-useCallback for event handlers
-Debounced search input
-Lazy loading of components
-Avoid unnecessary re-renders
-Efficient Redux state updates
-🎨 UI/UX Design
-Fintech-style dashboard UI
-Clean spacing system
-Responsive grid layout
-Card-based analytics design
-Smooth chart rendering
-Modern typography
-🛠 Tech Stack
-Next.js (App Router)
-React.js
-Redux Toolkit
-Recharts
-Tailwind CSS
-📂 Key Services Example
-dealService.js
-getDeals()
-getDealById()
-filterDeals()
-analyticsService.js
-getAnalytics()
+- Recharts used for charts
+- Line charts → Growth & ROI
+- Bar charts → Investment trends
+- Pie charts → Risk distribution
+- Smooth animations + tooltips
 
-All services simulate real API behavior using async functions.
+---
 
-📦 Installation
+## ⚡ Performance Optimizations
+
+- useMemo & useCallback for expensive operations
+- Debounced search inputs
+- Lazy-loaded components
+- Reduced re-renders
+- Optimized state updates
+- Efficient filtering logic for large datasets
+
+---
+
+## 🎨 UI/UX Design
+
+- Clean fintech dashboard design
+- Responsive layout (mobile + desktop)
+- Consistent spacing & typography
+- Smooth micro-interactions
+- Modern card-based UI
+- Dark mode ready structure (extendable)
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js (App Router)
+- React.js
+- Tailwind CSS
+- Recharts
+- JavaScript (ES6+)
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/aniketbagul242/investment-dashboard.git
+2. Install Dependencies
 npm install
+3. Run Development Server
 npm run dev
-🧪 Testing Strategy
-
-Since no backend exists:
-
-Data validation handled in services
-UI tested with mock datasets
-Error states simulated manually
+4. Open Application
+http://localhost:3000
