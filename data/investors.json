@@ -1,0 +1,16 @@
+[
+  {
+    "id": "i1",
+    "name": "Rahul Sharma",
+    "budget": 200000,
+    "riskPreference": "low",
+    "preferredIndustries": ["Fintech", "AI"]
+  },
+  {
+    "id": "i2",
+    "name": "Priya Mehta",
+    "budget": 150000,
+    "riskPreference": "medium",
+    "preferredIndustries": ["Energy", "Healthcare"]
+  }
+]

@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ Investment Dashboard (Next.js)
 
-## Getting Started
+A highly interactive frontend-only investment dashboard built using Next.js, React, Redux Toolkit, and Recharts, simulating real-world fintech analytics without any backend APIs.
 
-First, run the development server:
+ Live Demo
 
-```bash
+(Add your Vercel link here)
+
+📁 Project Overview :
+
+This project simulates a real-world investor & corporate dashboard where all data is mocked locally and API behavior is replicated using service layers with artificial delays.
+
+It focuses on:
+
+Scalable frontend architecture
+Data simulation (no backend APIs)
+Advanced UI/UX design
+Performance optimization
+State management with Redux Toolkit
+
+
+
+ Architecture:
+
+The project follows a feature-based architecture:
+
+/components   → Reusable UI components (charts, cards, layout)
+/services     → Mock API layer (dealService, analyticsService)
+/data         → Static JSON datasets
+/store        → Redux Toolkit slices
+/hooks        → Custom React hooks (if any)
+/utils        → Helper functions
+/app          → Next.js pages (dashboard, corporate, etc.)
+
+
+ Data Layer (Mock Data) :
+
+Instead of backend APIs, the app uses:
+
+deals.json → 50–100 mock deals
+investors.json → 10–20 investors
+
+Stored locally in /data folder.
+
+ Service Layer (API Simulation)
+
+All data operations are handled via service files:
+
+Features:
+Simulated API calls using Promises
+Artificial delay (300–800ms)
+Filtering, sorting, pagination logic
+Error simulation (optional)
+
+Example:
+
+await new Promise(res => setTimeout(res, 600));
+📈 Features
+🏠 Investor Dashboard
+Total Deals
+Average ROI
+Total Investment
+Charts:
+ROI Performance
+Investment Growth
+Risk Distribution
+🔍 Deal Explorer
+Debounced search
+Multi-filter (ROI, risk, industry, investment range)
+Sorting
+Pagination support
+📄 Deal Details Page
+Company overview
+Financial metrics
+ROI projections
+Risk analysis
+Tab-based UI
+🧠 Recommendation Engine
+
+Frontend-based scoring system:
+
+Risk match
+Industry match
+Budget compatibility
+ROI attractiveness
+
+Deals are ranked using a computed score and memoized for performance.
+
+💼 Corporate Dashboard
+Total funding raised
+Investor count
+Conversion rate
+Trend charts using Recharts
+📊 Data Visualization
+
+Libraries used:
+
+Recharts
+
+Charts implemented:
+
+Line Chart → ROI / Growth trends
+Bar Chart → Investment distribution
+Pie Chart → Risk analysis
+🧩 State Management
+Redux Toolkit used for global state
+Handles:
+Loading states
+Modal state
+Theme state (light/dark optional)
+Caching logic
+⚡ Performance Optimization
+
+Implemented optimizations:
+
+useMemo for computed filtering
+useCallback for event handlers
+Debounced search input
+Lazy loading of components
+Avoid unnecessary re-renders
+Efficient Redux state updates
+🎨 UI/UX Design
+Fintech-style dashboard UI
+Clean spacing system
+Responsive grid layout
+Card-based analytics design
+Smooth chart rendering
+Modern typography
+🛠 Tech Stack
+Next.js (App Router)
+React.js
+Redux Toolkit
+Recharts
+Tailwind CSS
+📂 Key Services Example
+dealService.js
+getDeals()
+getDealById()
+filterDeals()
+analyticsService.js
+getAnalytics()
+
+All services simulate real API behavior using async functions.
+
+📦 Installation
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧪 Testing Strategy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Since no backend exists:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Data validation handled in services
+UI tested with mock datasets
+Error states simulated manually

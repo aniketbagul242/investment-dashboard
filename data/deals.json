@@ -1,0 +1,38 @@
+[
+  {
+    "id": "d1",
+    "company": "AlphaTech",
+    "industry": "FinTech",
+    "roi": 18,
+    "risk": "medium",
+    "minInvestment": 5000,
+    "maxInvestment": 50000
+  },
+  {
+    "id": "d2",
+    "company": "GreenEnergy Co",
+    "industry": "Energy",
+    "roi": 12,
+    "risk": "low",
+    "minInvestment": 10000,
+    "maxInvestment": 80000
+  },
+  {
+    "id": "d3",
+    "company": "MediCare AI",
+    "industry": "HealthTech",
+    "roi": 22,
+    "risk": "high",
+    "minInvestment": 8000,
+    "maxInvestment": 60000
+  },
+  {
+    "id": "d4",
+    "company": "SmartBank",
+    "industry": "FinTech",
+    "roi": 15,
+    "risk": "low",
+    "minInvestment": 7000,
+    "maxInvestment": 90000
+  }
+]
